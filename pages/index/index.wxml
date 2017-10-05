@@ -1,13 +1,23 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <!-- loading-->
+  <loading hidden="{{isHidden}}"></loading>
+  <!-- banner部分-->
+  <swiper class="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{bannerUrls}}">
+      <swiper-item class="banner-item">
+        <image src="{{item}}" class="banner-item-image" mode="scaleToFill" height="100" width="100%"/>
+      </swiper-item>
     </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  </swiper>
+  <!-- location and search-->
+  <view class="search-section">
+    <view class="search-city">北京</view>
+    <view class="search-container">
+      <view class='search-input-container'>
+        <input class="search-input"  placeholder="输入搜索"/>
+      </view>
+      <view class="search-btn">搜索</view>
+    </view>
   </view>
 </view>
