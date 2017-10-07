@@ -1,5 +1,7 @@
 /**index.wxss**/
-
+page {
+  background-color: #f6f6f6;
+}
 /* banner*/
 .banner {
   height: 150px;
@@ -8,45 +10,141 @@
 .banner-item {
   height: 100%;
 }
+.banner-item-navi {
+  width: 100%;
+  height: 100%;
+}
 .banner-item-image {
   width: 100%;
   height: 100%;
 }
 /* search*/
 .search-section {
-  padding: 0 24rpx;
+  padding: 24rpx 24rpx 0;
   display: flex;
-  margin-top: 24rpx;
+  background-color: #fff;
 }
 .search-city {
   margin-right: 3px;
-  width: 60px;
+  width: 80px;
   height: 34px;
   line-height: 34px;
   border-radius: 5px;
-  background-color: rgb(235,235,235);
+  background-color: #f1f1ef;
   text-align: center;
+  display: flex;
+  align-items: center;
+}
+.locate-icon {
+  width: 14px;
+  height: 14px;
+  margin-left: 5px;
+}
+.city-name {
+  flex: 1;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow: hidden;
+  text-align: center;
+  color: #ada9a8;
 }
 .search-container {
   flex: 1;
   display: flex;
-  border-radius: 5px;
 }
 .search-input-container {
   flex: 1;
-  border:1px solid rgb(235,235,235);
+  border:1px solid #ada9a8;
   display: flex;
   align-items: center;
+  border-radius: 5px;
+}
+.search-icon {
+  width: 14px;
+  height: 14px;
+  margin: 0 5px;
 }
 .search-input {
   height: 22px;
   line-height: 22px;
+  flex: 1;
 }
 .search-btn {
-  padding: 5px;
+  padding: 5px 7px;
   border: 1px solid red;
   color: red;
   border-radius: 5px;
   margin-left: 3px;
-  display: none;
+  display: block;
+}
+
+/*category*/
+.category-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  flex-wrap: wrap;
+}
+.category-item {
+  width:25%;
+  text-align: center;
+  padding: 15px 0;
+}
+.category-item-icon {
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin:  0 auto;
+}
+.category-item-text {
+  padding-top: 5px;
+  display: block;
+}
+/* 品牌街*/
+.brand-section {
+  margin: 15px 0;
+  background-color: white;
+  padding: 15px 0 5px;
+  font-family: "PingFangSC-Medium";
+}
+.brand-title {
+  text-align: center;
+  position: relative;
+}
+.brand-more-icon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAcklEQVQ4T6XTwQ2AIBAF0aETO1A70A4swQ5syRItwfybhgV2gYQb8xICmxhcqdGfwAXswGOdbQFqbmAuIR6giniBIhIBTCQKZEgP8EXWEWACth5Az7oo1t+IAr9Yd4kAWRwBzNgLFGMPoGHSPkaGqTqwLzd5GhHevmocAAAAAElFTkSuQmCC") no-repeat center center;
+}
+.list_scroll_x_box {
+  height: 160rpx;
+  white-space: nowrap;
+  display: flex;
+  margin-top: 10px;
+}
+
+.list_hot_box {
+  width: 180rpx;
+  height: 160rpx;
+  margin-right: 24rpx;
+  display: inline-block;
+}
+
+.list_hot_image {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* 点击查看更多*/
+.click-for-more {
+  width: 82%;
+  margin: 40rpx auto 100rpx;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 0;
 }

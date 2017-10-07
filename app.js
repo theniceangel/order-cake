@@ -32,8 +32,15 @@ App({
         }
       }
     })
+    // 可使用窗口高度
+		wx.getSystemInfo({
+			success: res => {
+			  this.globalData.windowHeight = res.windowHeight
+      }
+		})
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    windowHeight: null
   }
 })

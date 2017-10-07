@@ -1,0 +1,19 @@
+<template name="cake-list">
+    <view class="cake-list-item">
+        <view class="cake-list-item-container">
+            <image class="cake-list-item-img" src="{{img}}" alt="" mode="scaleToFill" />
+        </view>
+        <view class="cake-list-item-description">
+            <view class="cake-list-item-title">{{name}}</view>
+            <view class="cake-list-item-brand">{{brandName}}</view>
+            <view class="cake-list-item-price-wrapper">
+                <text class="cake-list-item-current-price">¥{{skuPrice}}</text>
+                <text class="cake-list-item-original-price" wx:if="{{skuPrice !== oriPrice}}">¥{{oriPrice}}</text>
+            </view>
+            <view class="cake-list-item-comment-wrapper">
+                <text class="cake-list-item-comment">{{info1}}</text>
+                <text class="cake-list-item-dispatch-way">{{info2}}</text>
+            </view>
+        </view>
+    </view>
+</template>

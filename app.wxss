@@ -1,3 +1,80 @@
 page {
     font-size: 14px;
+    font-family: "PingFangSC-Light", "STHeitiSC-Medium", "HelveticaNeue", "Microsoft YaHei", "Arial", "sans-serif";
+}
+.clearfix:after {
+    clear: both;
+    content:'';
+    height: 0%;
+    display: block;
+}
+/* 推荐列表*/
+.cake-list-section {
+    padding: 24rpx 24rpx 0;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.cake-list-item {
+    width: 48%;
+    box-sizing: border-box;
+    border: 1px solid #f1f1f1;
+    height: 480rpx;
+    margin-bottom: 20rpx;
+    overflow: hidden;
+}
+.cake-list-item-container {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+}
+.cake-list-item-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.cake-list-item-description {
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+.cake-list-item-title {
+    width: 100%;
+    font-size: 14px;
+    text-indent: 20rpx;
+    font-family: "PingFangSC-Medium";
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cake-list-item-brand {
+    width: 100%;
+    color:#717171;
+    text-indent: 20rpx;
+}
+.cake-list-item-price-wrapper {
+    width: 100%;
+    text-indent: 20rpx;
+}
+.cake-list-item-current-price {
+    color: #d74e24;
+}
+.cake-list-item-original-price {
+    text-decoration: line-through;
+    margin-left: 40rpx;
+    color:#717171;
+}
+.cake-list-item-comment-wrapper {
+    text-indent: 20rpx;
+    width: 100%;
+    color:#afafaf;
+    display: flex;
+    justify-content: space-between;
+}
+.cake-list-item-dispatch-way {
+    margin-right: 20rpx;
 }

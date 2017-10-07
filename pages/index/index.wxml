@@ -1,23 +1,61 @@
+<import src="../../templates/cake-list.wxml"/>
 <!--index.wxml-->
 <view class="container">
   <!-- loading-->
   <loading hidden="{{isHidden}}"></loading>
   <!-- banner部分-->
-  <swiper class="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{bannerUrls}}">
+  <swiper class="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" circular="{{circular}}" duration="{{duration}}">
+    <block wx:for="{{bannerUrls}}" wx:key="item">
       <swiper-item class="banner-item">
-        <image src="{{item}}" class="banner-item-image" mode="scaleToFill" height="100" width="100%"/>
+        <navigator class="banner-item-navi">
+          <image src="{{item}}" class="banner-item-image" mode="scaleToFill" height="100" width="100%"/>
+        </navigator>
       </swiper-item>
     </block>
   </swiper>
   <!-- location and search-->
   <view class="search-section">
-    <view class="search-city">北京</view>
+    <view class="search-city">
+      <image class="locate-icon" src="../../assets/images/locate.png" alt="failed" />
+      <text class="city-name">北京</text>
+    </view>
     <view class="search-container">
       <view class='search-input-container'>
-        <input class="search-input"  placeholder="输入搜索"/>
+        <image class="search-icon" src="../../assets/images/search.png" alt="failed" mode="scaleToFill"/>
+        <input class="search-input"  bindfocus="showSearchBtn" bindblur="hideSearchBtn" placeholder="输入搜索"/>
       </view>
-      <view class="search-btn">搜索</view>
+      <view class="search-btn" hidden="{{hideSearch}}">搜索</view>
     </view>
   </view>
+  <!-- category-->
+  <view class="category-section">
+    <view class="category-container">
+      <block wx:for="{{categoryIcons}}" wx:key="title">
+          <view class="category-item">
+            <image class="category-item-icon" src="{{item.imgUrl}}" alt="" mode="scaleToFill" />
+            <text class="category-item-text">{{item.title}}</text>
+          </view>
+      </block>
+    </view>
+  </view>
+  <!-- 品牌街-->
+  <view class="brand-section">
+    <view class="brand-title">
+      品牌街
+      <view class="brand-more-icon"></view>
+    </view>
+    <scroll-view class="list_scroll_x_box" scroll-x scroll-with-animation="true">
+      <view class="list_hot_box" wx:for="{{brandList}}">
+        <image src="{{item.imgUrl}}" class="list_hot_image" mode="widthFix"></image>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 蛋糕推荐-->
+  <view class="cake-list-section">
+    <block wx:for="{{recommendList}}" wx:key="id">
+      <template  is="cake-list" data="{{...item}}"></template>
+    </block>
+  </view>
+  <!-- 点击查看更多-->
+  <view class="click-for-more">点击查看更多</view>
 </view>
