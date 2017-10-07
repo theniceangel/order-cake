@@ -1,0 +1,8 @@
+<template name="brand-list">
+    <view class="brand-list-item">
+        <view class="brand-list-item-container">
+            <image class="brand-list-item-img" src="{{img}}" alt="" mode="scaleToFill"/>
+            <text class="brand-list-item-text">{{name}}</text>
+        </view>
+    </view>
+</template>

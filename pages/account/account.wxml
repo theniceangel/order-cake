@@ -1,0 +1,38 @@
+<!-- 个人中心-->
+<view class="account-container">
+    <!-- 个人信息-->
+    <view class="account-userinfo">
+        <image class="account-userinfo-avatar" src="{{avatar}}" alt=""/>
+        <text class="account-userinfo-text">{{nickName}}</text>
+    </view>
+    <!-- 查看订单-->
+    <view class="check-orders-section">
+        <text class="check-order">查看订单</text>
+        <view class="check-all">
+            <text class="check-all-text">查看全部</text>
+            <text class="check-more-icons"></text>
+        </view>
+    </view>
+    <!-- 灰色1px背景线-->
+    <view class="grey-line"></view>
+    <!-- 待操作部分-->
+    <view class="waiting-section">
+        <block wx:for="{{operateIcons}}">
+            <view class="waiting-item">
+                <image class="waiting-item-icon" src="{{item.img}}" />
+                <text class="waiting-item-des">{{item.name}}</text>
+            </view>
+        </block>
+    </view>
+    <!-- 优惠券,地址管理,解除绑定,意见反馈,版本号-->
+    <view class="other-sections-container">
+        <block wx:for="{{otherSections}}">
+            <view class="section-container">
+                <text class="section-name">{{item.name}}</text>
+                <text class="section-redirect-icon" wx:if="{{item.canRedirect}}"></text>
+                <text class="section-redirect-version" wx:else>v2.1.5</text>
+            </view>
+            <view class="grey-line" wx:if="{{item.hasGreyLine}}"></view>
+        </block>
+    </view>
+</view>

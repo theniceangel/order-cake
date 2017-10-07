@@ -1,8 +1,13 @@
-.log-list {
+.brand-section {
   display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.log-item {
-  margin: 10rpx;
+.more-brand-cakes {
+  margin: 20rpx auto 35rpx;
+  width: 94%;
+  box-sizing: border-box;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
 }

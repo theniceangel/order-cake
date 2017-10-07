@@ -1,0 +1,106 @@
+page {
+    background-color: #f6f6f6;
+}
+.grey-line {
+    height: 1px;
+    width: 100%;
+    background-color: #bbb;
+}
+/* 个人信息*/
+.account-userinfo {
+    width: 100%;
+    height: 250rpx;
+    background-color: #e43b36;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-family: "PingFangSC-Light";
+}
+.account-userinfo-avatar {
+    width: 126rpx;
+    height: 126rpx;
+    border-radius: 100%;
+    margin: 0 20rpx 0 40rpx;
+    border:2px solid white;
+}
+.account-userinfo-text {
+    font-size: 16px;
+}
+/* 查看订单*/
+.check-orders-section {
+    width:100%;
+    padding:0 24rpx;
+    height: 104rpx;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #fff;
+
+}
+.check-order {
+    flex:1;
+}
+.check-all {
+    width:100px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.check-all-text {
+    flex:1;
+    color: #bbb;
+}
+.check-more-icons {
+    width: 16px;
+    height: 16px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAcklEQVQ4T6XTwQ2AIBAF0aETO1A70A4swQ5syRItwfybhgV2gYQb8xICmxhcqdGfwAXswGOdbQFqbmAuIR6giniBIhIBTCQKZEgP8EXWEWACth5Az7oo1t+IAr9Yd4kAWRwBzNgLFGMPoGHSPkaGqTqwLzd5GhHevmocAAAAAElFTkSuQmCC") no-repeat center center;
+}
+/* 待操作的选项*/
+.waiting-section {
+    display: flex;
+    justify-content: space-around;
+    height: 140rpx;
+    background-color: #fff;
+}
+.waiting-item {
+    flex:1;
+    height: 100%;
+    text-align: center;
+}
+.waiting-item-icon {
+    display: block;
+    width: 48rpx;
+    height: 48rpx;
+    margin: 10px auto;
+}
+.waiting-item-des {
+    text-align: center;
+    color: #bbb;
+    font-size: 12px;
+    display: block;
+}
+/* 优惠券,地址管理,解除绑定,意见反馈,版本号*/
+.other-sections-container {
+    margin-top: 30rpx;
+    background-color: #fff;
+}
+.section-container {
+    height: 104rpx;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 24rpx;
+    display: flex;
+    align-items: center;
+}
+.section-name {
+    flex: 1;
+}
+.section-redirect-icon {
+    width: 16px;
+    height: 16px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAcklEQVQ4T6XTwQ2AIBAF0aETO1A70A4swQ5syRItwfybhgV2gYQb8xICmxhcqdGfwAXswGOdbQFqbmAuIR6giniBIhIBTCQKZEgP8EXWEWACth5Az7oo1t+IAr9Yd4kAWRwBzNgLFGMPoGHSPkaGqTqwLzd5GhHevmocAAAAAElFTkSuQmCC") no-repeat center center;
+}
+.section-redirect-version {
+    font-size: 12px;
+}

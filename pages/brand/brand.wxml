@@ -1,0 +1,13 @@
+<import src="../../templates/brand-list.wxml"/>
+<!--brand.wxml-->
+<view class="brand-section">
+  <block wx:for="{{brandList}}" wx:key="id">
+    <template is="brand-list" data="{{...item}}"></template>
+  </block>
+
+</view>
+<!-- loading-->
+<loading hidden="{{isHidden}}"></loading>
+<!-- 全部大牌蛋糕-->
+<view class="more-brand-cakes">全部大牌蛋糕</view>
+

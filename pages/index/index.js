@@ -6,7 +6,6 @@ Page({
 	data: {
 		// 控制是否显示加载中
 		isHidden: false,
-		winWidth: 0,
 		/*
 		* 顶部轮播图的属性配置
 		* */

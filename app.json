@@ -1,7 +1,9 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/account/account",
+    "pages/brand/brand"
+
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -10,12 +12,22 @@
     "navigationBarTextStyle":"white"
   },
   "tabBar": {
+    "selectedColor": "#ff393a",
     "list": [{
       "pagePath": "pages/index/index",
+      "iconPath": "assets/images/homepage.png",
+      "selectedIconPath": "assets/images/homepage_fill.png",
       "text": "首页"
     }, {
-      "pagePath": "pages/logs/logs",
-      "text": "日志"
+      "pagePath": "pages/brand/brand",
+      "iconPath": "assets/images/manage.png",
+      "selectedIconPath": "assets/images/manage_fill.png",
+      "text": "品牌街"
+    }, {
+      "pagePath": "pages/account/account",
+      "iconPath": "assets/images/people.png",
+      "selectedIconPath": "assets/images/people_fill.png",
+      "text": "我的"
     }]
   }
 }

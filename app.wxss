@@ -10,7 +10,7 @@ page {
 }
 /* 推荐列表*/
 .cake-list-section {
-    padding: 24rpx 24rpx 0;
+    padding: 12rpx 6rpx 0;
     background-color: #fff;
     display: flex;
     flex-wrap: wrap;
@@ -20,7 +20,6 @@ page {
     width: 48%;
     box-sizing: border-box;
     border: 1px solid #f1f1f1;
-    height: 480rpx;
     margin-bottom: 20rpx;
     overflow: hidden;
 }
@@ -69,12 +68,49 @@ page {
     color:#717171;
 }
 .cake-list-item-comment-wrapper {
-    text-indent: 20rpx;
     width: 100%;
     color:#afafaf;
     display: flex;
     justify-content: space-between;
+    font-size: 10px;
+    text-indent: 20rpx;
 }
 .cake-list-item-dispatch-way {
-    margin-right: 20rpx;
+    margin-right: 10rpx;
+}
+/* 品牌列表*/
+.brand-list-item {
+    position: relative;
+    width:30%;
+    padding-top: 30%;
+    margin: 1% 1% ;
+}
+.brand-list-item-container {
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ccc;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    box-sizing:border-box;
+}
+.brand-list-item-img {
+    display: block;
+    width: 100%;
+    max-height: 80%;
+}
+.brand-list-item-text {
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 24px;
+    line-height:24px;
+    color:#717171;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
